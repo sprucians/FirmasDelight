@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package com.zoniic645.firmasdelight;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.level.block.Block;
