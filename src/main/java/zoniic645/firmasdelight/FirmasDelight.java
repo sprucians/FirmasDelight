@@ -1,4 +1,4 @@
-package com.zoniic645.firmasdelight;
+package zoniic645.firmasdelight;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.level.block.Block;
