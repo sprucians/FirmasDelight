@@ -116,7 +116,6 @@ dependencies {
     minecraft 'net.minecraftforge:forge:1.18.2-40.1.84'
     implementation fg.deobf("curse.maven:tfc-302973:${tfc_identifier}")
 
-
     if (System.getProperty("idea.sync.active") != "true") {
         annotationProcessor "org.spongepowered:mixin:${mixin_version}:processor"
     }
@@ -124,12 +123,12 @@ dependencies {
     // Patchouli
     implementation fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}")
 
+    //Farmer's Delight
     implementation fg.deobf("curse.maven:farmers-delight-398521:3999153")
-    compileOnly fg.deobf("mezz.jei:jei-1.18.2:9.5.4.166:api")
-    // at runtime, use the full JEI jar
-    runtimeOnly fg.deobf("mezz.jei:jei-1.18.2:9.5.4.166")
-    compileOnly fg.deobf("vazkii.patchouli:Patchouli:1.18.2-67:api")
-    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.18.2-67")
+
+    // JEI
+    compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}:${jei_version}:api")
+    runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}:${jei_version}")
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
