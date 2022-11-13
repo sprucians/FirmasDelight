@@ -2,6 +2,7 @@ modLoader="javafml"
 loaderVersion="[40,)"
 license="All rights reserved"
 issueTrackerURL="https://github.com/sprucians/FirmasDelight/issues/"
+
 [[mods]]
 modId="firmasdelight"
 version="${file.jarVersion}"
@@ -12,3 +13,28 @@ authors="zoniic645"
 description='''
 Make comatibility to TFC and farmer's Delight
 '''
+
+[[dependencies.firmasdelight]]
+    modId="farmersdelight"
+    mandatory=true
+    versionRange="[0,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.firmasdelight]]
+    modId="tfc"
+    mandatory=true
+    versionRange="[0,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.firmasdelight]]
+    modId="forge"
+    mandatory=true
+    versionRange="[40,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.firmasdelight]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18.2,1.19)"
+    ordering="AFTER"
+    side="BOTH"
