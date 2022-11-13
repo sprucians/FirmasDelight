@@ -5,6 +5,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
@@ -14,6 +15,9 @@ import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import zoniic645.firmasdelight.common.FarmersDelightBlockEntities;
+import zoniic645.firmasdelight.common.FarmersDelightBlocks;
+import zoniic645.firmasdelight.common.FarmersDelightItems;
 
 import java.util.stream.Collectors;
 
@@ -35,6 +39,12 @@ public class FirmasDelight
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+
+        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        FarmersDelightBlocks.BLOCKS.register(bus);
+        FarmersDelightItems.ITEMS.register(bus);
+        FarmersDelightBlockEntities.BLOCK_ENTITIES.register(bus);
     }
 
     private void setup(final FMLCommonSetupEvent event)
